@@ -9,7 +9,7 @@ class DeckTest extends \PHPUnit\Framework\TestCase
     protected function setUp()
     {
         $this->deck = new Deck();
-        $this->test = new TestHelpers();
+        $this->testHelper = new TestHelpers();
     }
 
     protected function tearDown()
@@ -54,15 +54,15 @@ class DeckTest extends \PHPUnit\Framework\TestCase
         // $formatArrayStructure = $this->test->formatArrayStructure();
 
 
-        $arrayOfNames = $this->test->CardNames();
+        $arrayOfNames = $this->testHelper->CardNames();
         print_r($arrayOfNames);
         $this->assertEquals($this->deck->names, $arrayOfNames);
     }
     // maybe test for contents of array?
 
-    public function testCardNameIsDefinedWhenCreatingADeck()
+    public function testCardNameIsCorrectWhenCreatingADeck()
     {
-        $formattedDeck = $this->test->formatArrayStructure($this->deck->CreateDeck('standard'));
+        $formattedDeck = $this->testHelper->formatArrayStructure($this->deck->CreateDeck('standard'));
         $this->assertEquals($formattedDeck[0][0], 'Ace');
     }
 }

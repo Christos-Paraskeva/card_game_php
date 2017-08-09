@@ -7,7 +7,7 @@ class Deck {
     $this->cards = [];
   }
 
-  public function CreateDeck($type) {
+  public function createDeck($type) {
     if ($type === 'standard') {
       $positionInDeck = 1;
 

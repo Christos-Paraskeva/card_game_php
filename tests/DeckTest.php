@@ -62,7 +62,7 @@ class DeckTest extends \PHPUnit\Framework\TestCase
 
     public function testCardNameIsCorrectWhenCreatingADeck()
     {
-        $formattedDeck = $this->testHelper->formatArrayStructure($this->deck->CreateDeck('standard'));
+        $formattedDeck = $this->testHelper->formatArrayStructure($this->deck->createDeck('standard'));
         $this->assertEquals($formattedDeck[0][0], 'Ace');
     }
 }

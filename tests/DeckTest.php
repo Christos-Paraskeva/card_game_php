@@ -22,7 +22,17 @@ class DeckTest extends \PHPUnit\Framework\TestCase
 
     public function testIsInitializedWithAnArrayWithCorrectAmountOfNames()
     {
-        $this->assertEquals(sizeof($this->deck->names), 9);
+        $this->assertEquals(sizeof($this->deck->names), 13);
+    }
+
+    public function testIsInitializedWithAnArrayWithCorrectAmountOfSuits()
+    {
+        $this->assertEquals(sizeof($this->deck->suits), 4);
+    }
+
+    public function testIsInitializedWithAnEmptyArrayOfCards()
+    {
+        $this->assertEquals($this->deck->cards, []);
     }
     // maybe test for contents of array?
 

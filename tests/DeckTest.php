@@ -51,11 +51,7 @@ class DeckTest extends \PHPUnit\Framework\TestCase
 
     public function testArrayOfNamesIsCorrect()
     {
-        // $formatArrayStructure = $this->test->formatArrayStructure();
-
-
         $arrayOfNames = $this->testHelper->CardNames();
-        print_r($arrayOfNames);
         $this->assertEquals($this->deck->names, $arrayOfNames);
     }
     // maybe test for contents of array?

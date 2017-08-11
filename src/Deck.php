@@ -17,8 +17,8 @@ class Deck {
           $positionInDeck += 1;
         }
       }
-
       return $this->cards;
+
     } else {
       print 'This should be an error message';
     }
